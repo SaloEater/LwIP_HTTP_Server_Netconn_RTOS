@@ -1,0 +1,9 @@
+tcp_echoserver.c:84:6:tcp_echoserver_init	16	static
+tcp_echoserver.c:119:14:tcp_echoserver_accept	32	static
+tcp_echoserver.c:167:9:parse_string	232	static
+tcp_echoserver.c:480:14:tcp_echoserver_recv	96	static
+tcp_echoserver.c:632:13:tcp_echoserver_error	24	static
+tcp_echoserver.c:652:14:tcp_echoserver_poll	24	static
+tcp_echoserver.c:692:14:tcp_echoserver_sent	32	static
+tcp_echoserver.c:723:13:tcp_echoserver_send	32	static
+tcp_echoserver.c:783:13:tcp_echoserver_connection_close	16	static
