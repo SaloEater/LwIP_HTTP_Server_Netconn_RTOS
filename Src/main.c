@@ -64,6 +64,15 @@ struct netif gnetif; /* network interface structure */
 
 UART_HandleTypeDef huart3;
 
+/* CAN variables ------------------------------------------------------------- */
+uint8_t ubKeyNumber = 0x0;
+CAN_HandleTypeDef     CanHandle;
+CAN_TxHeaderTypeDef   TxHeader;
+CAN_RxHeaderTypeDef   RxHeader;
+uint8_t               TxData[8];
+uint8_t               RxData[8];
+uint32_t              TxMailbox;
+
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void StartThread(void const * argument);
@@ -111,15 +120,15 @@ int main(void)
 
   /* Init thread */
 #if defined(__GNUC__)
-  osThreadDef(Start, StartThread, osPriorityNormal, 0, configMINIMAL_STACK_SIZE * 5);
+  //osThreadDef(Start, StartThread, osPriorityNormal, 0, configMINIMAL_STACK_SIZE * 5);
 #else
-  osThreadDef(Start, StartThread, osPriorityNormal, 0, configMINIMAL_STACK_SIZE * 2);
+  //osThreadDef(Start, StartThread, osPriorityNormal, 0, configMINIMAL_STACK_SIZE * 2);
 #endif
   
-  osThreadCreate (osThread(Start), NULL);
+  //osThreadCreate (osThread(Start), NULL);
 
   /* Start scheduler */
-  osKernelStart();
+  //osKernelStart();
   
 
   //todo HAL_UART_Transmit(&huart3, "Control_Lost\r\n", 14, 100);
@@ -206,7 +215,77 @@ int main(void)
 
   }
   /* We should never get here as control is now taken by the scheduler */
+}
 
+/**
+  * @brief  Configures the CAN.
+  * @param  None
+  * @retval None
+  */
+static void CAN_Config(void)
+{
+  CAN_FilterTypeDef  sFilterConfig;
+
+  /*##-1- Configure the CAN peripheral #######################################*/
+  CanHandle.Instance = CANx;
+
+  CanHandle.Init.TimeTriggeredMode = DISABLE;
+  CanHandle.Init.AutoBusOff = DISABLE;
+  CanHandle.Init.AutoWakeUp = DISABLE;
+  CanHandle.Init.AutoRetransmission = ENABLE;
+  CanHandle.Init.ReceiveFifoLocked = DISABLE;
+  CanHandle.Init.TransmitFifoPriority = DISABLE;
+  CanHandle.Init.Mode = CAN_MODE_NORMAL;
+  CanHandle.Init.SyncJumpWidth = CAN_SJW_1TQ;
+  CanHandle.Init.TimeSeg1 = CAN_BS1_6TQ;
+  CanHandle.Init.TimeSeg2 = CAN_BS2_2TQ;
+  CanHandle.Init.Prescaler = 6;
+
+  if (HAL_CAN_Init(&CanHandle) != HAL_OK)
+  {
+    /* Initialization Error */
+    Error_Handler();
+  }
+
+  /*##-2- Configure the CAN Filter ###########################################*/
+  sFilterConfig.FilterBank = 0;
+  sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
+  sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
+  sFilterConfig.FilterIdHigh = 0x0000;
+  sFilterConfig.FilterIdLow = 0x0000;
+  sFilterConfig.FilterMaskIdHigh = 0x0000;
+  sFilterConfig.FilterMaskIdLow = 0x0000;
+  sFilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;
+  sFilterConfig.FilterActivation = ENABLE;
+  sFilterConfig.SlaveStartFilterBank = 14;
+
+  if (HAL_CAN_ConfigFilter(&CanHandle, &sFilterConfig) != HAL_OK)
+  {
+    /* Filter configuration Error */
+    Error_Handler();
+  }
+
+  /*##-3- Start the CAN peripheral ###########################################*/
+  if (HAL_CAN_Start(&CanHandle) != HAL_OK)
+  {
+    /* Start Error */
+    Error_Handler();
+  }
+
+  /*##-4- Activate CAN RX notification #######################################*/
+  if (HAL_CAN_ActivateNotification(&CanHandle, CAN_IT_RX_FIFO0_MSG_PENDING) != HAL_OK)
+  {
+    /* Notification Error */
+    Error_Handler();
+  }
+
+  /*##-5- Configure Transmission process #####################################*/
+  TxHeader.StdId = 0x321;
+  TxHeader.ExtId = 0x01;
+  TxHeader.RTR = CAN_RTR_DATA;
+  TxHeader.IDE = CAN_ID_STD;
+  TxHeader.DLC = 2;
+  TxHeader.TransmitGlobalTime = DISABLE;
 }
 
 /**

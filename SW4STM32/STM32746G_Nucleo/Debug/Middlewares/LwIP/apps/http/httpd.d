@@ -1,5 +1,5 @@
 Middlewares/LwIP/apps/http/httpd.o: \
- D:/STM32CubeIDE/workspace_1.3.0/LwIP_HTTP_Server_Netconn_RTOS/Middlewares/Third_Party/LwIP/src/apps/http/httpd.c \
+ C:/Users/danil/Documents/Univ/Robot/LwIP_HTTP_Server_Netconn_RTOS/LwIP_HTTP_Server_Netconn_RTOS/Middlewares/Third_Party/LwIP/src/apps/http/httpd.c \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/init.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/opt.h \
  ../../../Inc/lwipopts.h \
@@ -19,7 +19,7 @@ Middlewares/LwIP/apps/http/httpd.o: \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/priv/memp_priv.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/priv/mem_priv.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/apps/fs.h \
- D:/STM32CubeIDE/workspace_1.3.0/LwIP_HTTP_Server_Netconn_RTOS/Middlewares/Third_Party/LwIP/src/apps/http/httpd_structs.h \
+ C:/Users/danil/Documents/Univ/Robot/LwIP_HTTP_Server_Netconn_RTOS/LwIP_HTTP_Server_Netconn_RTOS/Middlewares/Third_Party/LwIP/src/apps/http/httpd_structs.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/def.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/altcp.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/tcp.h \
@@ -76,7 +76,7 @@ Middlewares/LwIP/apps/http/httpd.o: \
 
 ../../../Middlewares/Third_Party/LwIP/src/include/lwip/apps/fs.h:
 
-D:/STM32CubeIDE/workspace_1.3.0/LwIP_HTTP_Server_Netconn_RTOS/Middlewares/Third_Party/LwIP/src/apps/http/httpd_structs.h:
+C:/Users/danil/Documents/Univ/Robot/LwIP_HTTP_Server_Netconn_RTOS/LwIP_HTTP_Server_Netconn_RTOS/Middlewares/Third_Party/LwIP/src/apps/http/httpd_structs.h:
 
 ../../../Middlewares/Third_Party/LwIP/src/include/lwip/def.h:
 

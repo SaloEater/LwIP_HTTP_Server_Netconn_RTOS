@@ -1,5 +1,5 @@
 Application/User/main.o: \
- D:/STM32CubeIDE/workspace_1.3.0/LwIP_HTTP_Server_Netconn_RTOS/Src/main.c \
+ C:/Users/danil/Documents/Univ/Robot/LwIP_HTTP_Server_Netconn_RTOS/LwIP_HTTP_Server_Netconn_RTOS/Src/main.c \
  ../../../Inc/main.h \
  ../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../../../Inc/stm32f7xx_hal_conf.h \
@@ -80,7 +80,7 @@ Application/User/main.o: \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/sys.h \
  ../../../Middlewares/Third_Party/LwIP/system/arch/sys_arch.h \
  ../../../Inc/app_ethernet.h \
- d:\stm32cubeide\workspace_1.3.0\lwip_http_server_netconn_rtos\sw4stm32\stm32746g_nucleo\application\user\tcp_echoserver.h
+ c:\users\danil\documents\univ\robot\lwip_http_server_netconn_rtos\lwip_http_server_netconn_rtos\sw4stm32\stm32746g_nucleo\application\user\tcp_echoserver.h
 
 ../../../Inc/main.h:
 
@@ -242,4 +242,4 @@ Application/User/main.o: \
 
 ../../../Inc/app_ethernet.h:
 
-d:\stm32cubeide\workspace_1.3.0\lwip_http_server_netconn_rtos\sw4stm32\stm32746g_nucleo\application\user\tcp_echoserver.h:
+c:\users\danil\documents\univ\robot\lwip_http_server_netconn_rtos\lwip_http_server_netconn_rtos\sw4stm32\stm32746g_nucleo\application\user\tcp_echoserver.h:

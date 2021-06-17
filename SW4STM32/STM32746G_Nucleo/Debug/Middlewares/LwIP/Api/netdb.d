@@ -1,5 +1,5 @@
 Middlewares/LwIP/Api/netdb.o: \
- D:/STM32CubeIDE/workspace_1.3.0/LwIP_HTTP_Server_Netconn_RTOS/Middlewares/Third_Party/LwIP/src/api/netdb.c \
+ C:/Users/danil/Documents/Univ/Robot/LwIP_HTTP_Server_Netconn_RTOS/LwIP_HTTP_Server_Netconn_RTOS/Middlewares/Third_Party/LwIP/src/api/netdb.c \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/netdb.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/opt.h \
  ../../../Inc/lwipopts.h \

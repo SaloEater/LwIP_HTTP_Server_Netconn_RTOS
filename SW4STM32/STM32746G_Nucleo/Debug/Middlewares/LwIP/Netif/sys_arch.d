@@ -1,5 +1,5 @@
 Middlewares/LwIP/Netif/sys_arch.o: \
- D:/STM32CubeIDE/workspace_1.3.0/LwIP_HTTP_Server_Netconn_RTOS/Middlewares/Third_Party/LwIP/system/OS/sys_arch.c \
+ C:/Users/danil/Documents/Univ/Robot/LwIP_HTTP_Server_Netconn_RTOS/LwIP_HTTP_Server_Netconn_RTOS/Middlewares/Third_Party/LwIP/system/OS/sys_arch.c \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/debug.h \
  ../../../Middlewares/Third_Party/LwIP/src/include/lwip/arch.h \
  ../../../Middlewares/Third_Party/LwIP/system/arch/cc.h \

@@ -1,5 +1,5 @@
 Drivers/CMSIS/system_stm32f7xx.o: \
- D:/STM32CubeIDE/workspace_1.3.0/LwIP_HTTP_Server_Netconn_RTOS/Src/system_stm32f7xx.c \
+ C:/Users/danil/Documents/Univ/Robot/LwIP_HTTP_Server_Netconn_RTOS/LwIP_HTTP_Server_Netconn_RTOS/Src/system_stm32f7xx.c \
  ../../../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h \
  ../../../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f746xx.h \
  ../../../Drivers/CMSIS/Include/core_cm7.h \

@@ -1,6 +1,6 @@
 Drivers/BSP/STM32F7xx_Nucleo_144/stm32f7xx_nucleo_144.o: \
- D:/STM32CubeIDE/workspace_1.3.0/LwIP_HTTP_Server_Netconn_RTOS/Drivers/BSP/STM32F7xx_Nucleo_144/stm32f7xx_nucleo_144.c \
- D:/STM32CubeIDE/workspace_1.3.0/LwIP_HTTP_Server_Netconn_RTOS/Drivers/BSP/STM32F7xx_Nucleo_144/stm32f7xx_nucleo_144.h \
+ C:/Users/danil/Documents/Univ/Robot/LwIP_HTTP_Server_Netconn_RTOS/LwIP_HTTP_Server_Netconn_RTOS/Drivers/BSP/STM32F7xx_Nucleo_144/stm32f7xx_nucleo_144.c \
+ C:/Users/danil/Documents/Univ/Robot/LwIP_HTTP_Server_Netconn_RTOS/LwIP_HTTP_Server_Netconn_RTOS/Drivers/BSP/STM32F7xx_Nucleo_144/stm32f7xx_nucleo_144.h \
  ../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../../../Inc/stm32f7xx_hal_conf.h \
  ../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h \
@@ -37,7 +37,7 @@ Drivers/BSP/STM32F7xx_Nucleo_144/stm32f7xx_nucleo_144.o: \
  ../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  ../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h
 
-D:/STM32CubeIDE/workspace_1.3.0/LwIP_HTTP_Server_Netconn_RTOS/Drivers/BSP/STM32F7xx_Nucleo_144/stm32f7xx_nucleo_144.h:
+C:/Users/danil/Documents/Univ/Robot/LwIP_HTTP_Server_Netconn_RTOS/LwIP_HTTP_Server_Netconn_RTOS/Drivers/BSP/STM32F7xx_Nucleo_144/stm32f7xx_nucleo_144.h:
 
 ../../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 
