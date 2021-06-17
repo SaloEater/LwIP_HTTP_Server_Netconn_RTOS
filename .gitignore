@@ -46,3 +46,7 @@
 
 #Debug
 /SW4STM32/STM32746G_Nucleo/Debug
+
+#Exclude
+!asciitable2.png
+!echotool.exe
