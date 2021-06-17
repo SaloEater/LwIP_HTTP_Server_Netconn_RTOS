@@ -1,4 +1,0 @@
-httpserver-netconn.c:176:13:http_server_serve	64	static
-httpserver-netconn.c:255:13:http_server_netconn_thread	32	static
-httpserver-netconn.c:295:6:http_server_netconn_init	16	static
-httpserver-netconn.c:306:6:DynWebPage	568	static
